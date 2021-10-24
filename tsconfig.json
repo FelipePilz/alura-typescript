@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js", //Aonde que sera gravado os arquivos
+        "target": "ES6" //Converta para o EcmeScript 6
+    },
+    "include": ["app/**/*"]
+}
