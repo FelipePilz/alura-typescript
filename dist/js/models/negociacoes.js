@@ -1,5 +1,5 @@
 // Lista de negociações
-export class negociações {
+export class Negociacoes {
     constructor() {
         this.negociacoes = [];
     }

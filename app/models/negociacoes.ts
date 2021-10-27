@@ -2,7 +2,7 @@
 
 import { Negociacao } from "./negociacao.js";
 
-export class negociações {
+export class Negociacoes {
     private negociacoes: Array<Negociacao> = [];
 
     adiciona(negociacao: Negociacao) {
