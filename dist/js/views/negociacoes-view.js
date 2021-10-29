@@ -1,8 +1,9 @@
-export class NegociacoesView {
-    constructor(seletor) {
-        this.elemento = document.querySelector(seletor);
-    }
+import { View } from "./view.js";
+export class NegociacoesView extends View {
     template(model) {
+        if (model.lista().length == 0) {
+            return ``;
+        }
         return `
 		<table class="table table-hover table-bordered">
 			<thead>
