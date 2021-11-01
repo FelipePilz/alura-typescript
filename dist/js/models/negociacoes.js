@@ -1,4 +1,3 @@
-// Lista de negociações
 export class Negociacoes {
     constructor() {
         this.negociacoes = [];

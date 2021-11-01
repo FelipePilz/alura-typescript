@@ -9,7 +9,6 @@ export class Negociacao {
     }
     get data() {
         const data = new Date(this._data.getTime());
-        //Clonando a data
         return data;
     }
     static criaDe(dataString, quantidadeString, valorString) {
