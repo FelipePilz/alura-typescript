@@ -14,7 +14,9 @@ export class NegociacaoController {
 
     constructor() {
         this.inputData = document.querySelector("#data") as HTMLInputElement;
-        this.inputQuantidade = document.querySelector("#quantidade") as HTMLInputElement;
+        this.inputQuantidade = document.querySelector(
+            "#quantidade"
+        ) as HTMLInputElement;
         this.inputValor = document.querySelector("#valor") as HTMLInputElement;
         this.negociacoesView.update(this.negociacoes);
     }
@@ -26,7 +28,9 @@ export class NegociacaoController {
             this.inputValor.value
         );
         if (!this.diaUtil(negociacao.data)) {
-            this.mensagemView.update("Apenas negociações em dias úteis são aceitas!");
+            this.mensagemView.update(
+                "Apenas negociações em dias úteis são aceitas!"
+            );
             return; //Early return
         }
 
@@ -37,7 +41,10 @@ export class NegociacaoController {
 
     private diaUtil(data: Date): boolean {
         // 0 - Domingo \ 6 - Sabado
-        return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO;
+        return (
+            data.getDay() > DiasDaSemana.DOMINGO &&
+            data.getDay() < DiasDaSemana.SABADO
+        );
     }
 
     private limparFormulario(): void {
